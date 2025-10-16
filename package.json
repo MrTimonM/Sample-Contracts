@@ -1,0 +1,23 @@
+{
+  "name": "smart-contract-debug-repo",
+  "version": "1.0.0",
+  "description": "Sample Ethereum smart contract project with intentional bugs for AutoCodeFixer testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile"
+  },
+  "keywords": [
+    "ethereum",
+    "hardhat",
+    "solidity",
+    "testing",
+    "debugging"
+  ],
+  "author": "AutoCodeFixer",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  }
+}
