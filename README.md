@@ -107,39 +107,6 @@ When you run `npx hardhat test`, you should see:
 2. **"Should not allow withdrawal of full balance due to logic error"**
    - Fails due to Bug #1 (should revert but doesn't)
 
-## 🔧 How AutoCodeFixer Should Fix This
-
-The automated debugging agent should:
-
-1. **Run the tests** and identify which tests are failing
-2. **Read the error messages** and test expectations
-3. **Analyze the contract code** where bugs are indicated by comments
-4. **Apply the fixes:**
-   - Change `>=` to `>` on line 42
-   - Move balance updates (lines 48-49) to before the external call
-5. **Re-run tests** to verify all tests pass
-
-## 🧪 Test Categories
-
-- **Deposit Tests** (2 tests - both passing)
-  - Basic deposit functionality
-  - Multiple deposits tracking
-
-- **Withdraw Tests** (4 tests - 2 failing, 2 passing)
-  - Partial withdrawal ❌ FAILING
-  - Full balance withdrawal ❌ FAILING
-  - Excessive withdrawal prevention ✅ PASSING
-  - Zero amount prevention ✅ PASSING
-
-- **Balance Tracking Tests** (1 test - passing)
-  - Multiple user balance tracking ✅ PASSING
-
-## 📝 Notes for AutoCodeFixer
-
-- All bugs are clearly marked with `🐛` comments in the source code
-- The bugs are realistic scenarios that occur in real smart contract development
-- The fixes follow Solidity best practices (Checks-Effects-Interactions pattern)
-- After fixing, all 7 tests should pass
 
 ## 🔗 Technology Stack
 
